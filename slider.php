@@ -47,28 +47,28 @@
 						<aside id="featured-links">
 							<ul>
 								<li>
-									<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-1']; ?>" title="<?php echo $options['featured-link-title-1']; ?>">
+									<a class="featured-link" href="<?php echo $options['featured-link-1']; ?>" title="<?php echo $options['featured-link-title-1']; ?>">
 										<?php if($options['featured-link-title-1']) : ?>
 											<?php echo $options['featured-link-title-1']; ?>
 										<?php endif; ?>
 									</a>
 								</li>
 								<li>
-									<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-2']; ?>" title="<?php echo $options['featured-link-title-2']; ?>">
+									<a class="featured-link" href="<?php echo $options['featured-link-2']; ?>" title="<?php echo $options['featured-link-title-2']; ?>">
 										<?php if($options['featured-link-title-2']) : ?>
 											<?php echo $options['featured-link-title-2']; ?>
 										<?php endif; ?>
 									</a>
 								</li>
 								<li>
-									<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-3']; ?>" title="<?php echo $options['featured-link-title-3']; ?>">
+									<a class="featured-link" href="<?php echo $options['featured-link-3']; ?>" title="<?php echo $options['featured-link-title-3']; ?>">
 										<?php if($options['featured-link-title-3']) : ?>
 											<?php echo $options['featured-link-title-3']; ?>
 										<?php endif; ?>
 									</a>
 								</li>
 								<li>
-									<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-4']; ?>" title="<?php echo $options['featured-link-title-4']; ?>">
+									<a class="featured-link" href="<?php echo $options['featured-link-4']; ?>" title="<?php echo $options['featured-link-title-4']; ?>">
 										<?php if($options['featured-link-title-4']) : ?>
 											<?php echo $options['featured-link-title-4']; ?>
 										<?php endif; ?>

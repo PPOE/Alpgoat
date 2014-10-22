@@ -123,6 +123,10 @@ function scapegoat_theme_options_page() {
 									<label for="special-1-bg-2">
 										<input id="special-1-bg-2" type="radio" name="scapegoat_theme_options[special-1-bg-option]" value="special-1-bg-2" <?php checked( 'special-1-bg-2' == $options['special-1-bg-option'] ); ?> /> <?php _e('Orange','scapegoat'); ?>
 									</label>
+									<br />
+									<label for="special-1-bg-3">
+										<input id="special-1-bg-3" type="radio" name="scapegoat_theme_options[special-1-bg-option]" value="special-1-bg-3" <?php checked( 'special-1-bg-3' == $options['special-1-bg-option'] ); ?> /> <?php _e('Violet','scapegoat'); ?>
+									</label>
 							</tr>
 						</table>
 						
@@ -146,6 +150,10 @@ function scapegoat_theme_options_page() {
 									<br />
 									<label for="special-2-bg-2">
 										<input id="special-2-bg-2" type="radio" name="scapegoat_theme_options[special-2-bg-option]" value="special-2-bg-2" <?php checked( 'special-2-bg-2' == $options['special-2-bg-option'] ); ?> /> <?php _e('Orange','scapegoat'); ?>
+									</label>
+									<br />
+									<label for="special-2-bg-3">
+										<input id="special-2-bg-3" type="radio" name="scapegoat_theme_options[special-2-bg-option]" value="special-2-bg-3" <?php checked( 'special-2-bg-3' == $options['special-2-bg-option'] ); ?> /> <?php _e('Violet','scapegoat'); ?>
 									</label>
 							</tr>
 						</table>

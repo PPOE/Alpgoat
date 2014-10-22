@@ -1,4 +1,4 @@
-<?php /* Template Name: Ohne Sidebar */ ?>
+<?php /* Template Name: Kalender */ ?>
 
 		<?php get_header(); ?>
 		
@@ -38,7 +38,6 @@
 					</header>
 	
 					<article class="article">
-							<?php the_excerpt(); ?>
 							<?php the_content(); ?>
 					</article>
 					

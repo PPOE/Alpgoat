@@ -53,7 +53,8 @@ html[xmlns] .slides {display: block;}
 	right: 1em;
 	text-align: center;
 	z-index: 2000;
-	background: rgba(0,0,0,0.75);
+	background: rgba(0,0,0,0.35);
+	border-radius: 20px;
 }
 .flex-pauseplay .flex-play,
 .flex-pauseplay .flex-pause {
@@ -89,7 +90,8 @@ html[xmlns] .slides {display: block;}
 	padding: 0 0.25em;
 	text-align: center;
 	z-index: 2000;
-	background: rgba(0,0,0,0.75);
+	background: rgba(0,0,0,0.35);
+	border-radius: 20px;
 }
 .flex-direction-nav li {
 	display: block;
@@ -131,7 +133,8 @@ html[xmlns] .slides {display: block;}
 	padding: 0 0.25em;
 	text-align: center;
 	z-index: 2000;
-	background: rgba(0,0,0,0.75);
+	background: rgba(0,0,0,0.35);
+	border-radius: 20px;
 }
 .flex-control-nav li {
 	display: block;
@@ -158,7 +161,7 @@ html[xmlns] .slides {display: block;}
 }
 .flex-control-paging li a:hover,
 .flex-control-paging li a.flex-active {
-	background: #f80;
+	background: #666;
 }
 
 .flex-control-thumbs {margin: 5px 0 0; position: static; overflow: hidden;}

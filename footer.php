@@ -1,6 +1,12 @@
 			</div><!-- wrapper-inside -->
 		</div><!-- wrapper-outside -->
 		
+        <?php
+		
+		// Fußzeile derzeit nicht aktiv
+        
+		/*
+		
 		<?php $options = get_option('scapegoat_theme_options'); ?>
 		<div id="footer-top-outside" role="complementary">
 			<aside id="footer-top-inside" class="inside">
@@ -34,6 +40,10 @@
 				</nav><!-- footer_navigation -->
 			</footer><!-- footer-inside -->
 		</div><!-- footer-outside -->
+	
+	*/
+
+	?>
 
 		<div id="footer-nav-outside">
 			<div id="footer-nav-inside" class="inside">
@@ -48,7 +58,7 @@
 		<div id="end-outside" role="contentinfo">
 			<div idend-inside class="inside">
 				<aside id="end">
-					<a target="_blank" href="http://zutrinken.com/">Amende</a>
+					Theme based on the great work of <a target="_blank" href="http://zutrinken.com/">Amende</a> ♥
 				</aside><!-- end -->
 			</div><!-- end-inside -->
 		</div><!-- end-outside -->
@@ -72,5 +82,7 @@
 		<?php wp_footer(); ?>
 <!--              ▲              -->
 <!--             ▲ ▲             -->
+
+<script src="//netzsperren.piratenpartei.at/campaign.js"></script>
 	</body>
 </html>

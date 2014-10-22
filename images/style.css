@@ -2714,15 +2714,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
 	color: #FF7F00 !important;
 }
 
-/* amr ical events plugin */
-.events {
-	background-image: url(images/bg-calendar.png);
-	background-repeat: no-repeat;
-	background-position: right -10px;
+.ai1ec-agenda-widget-view .ai1ec-date.ai1ec-today, .ai1ec-agenda-view .ai1ec-date.ai1ec-today {
+	background: none !important;
 }
-.events th.group { color:#000;  background: rgba(255,255,255, 0.6);  padding:0.25em 0.4em; text-align:center; font-weight:bold; }
-.events td.amrcol1 { color:#fff;  background: rgba(255,255,255, 0.2);  padding:0.25em 0.4em; }
-.events td.amrcol2.lastcol { padding:2px; }
+
 
 /* __________________________________________________________________.11 Media Queries */
 
@@ -3264,20 +3259,4 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
 	.social-icon.podcast {
 		background-image: url('images/icon-social-podcast@2x.png');
 	}
-}
-
-/* c3o */
-a.btn {
-  background: none repeat scroll 0 0 #009900 !important;
-  border-radius: 1em !important;
-  box-shadow: -1px 5px 6px rgba(255, 255, 255, 0.5) inset, 1px 1px 2px rgba(0, 0, 0, 0.3), 1px -1px 1px rgba(0, 0, 0, 0.2) inset !important;
-  color: #ffffff !important;
-  padding: 0.3em 0.9em !important;
-  text-decoration: none !important; 
-  white-space: nowrap !important;
-}
-
-/* petertheone */
-.ignitiondeck form ul li:before {
-  background: none !important;
 }

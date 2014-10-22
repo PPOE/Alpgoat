@@ -1,5 +1,12 @@
 <?php
 
+/* allow svg uploads - added by c3o */
+function cc_mime_types( $mimes ){
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+}
+add_filter( 'upload_mimes', 'cc_mime_types' );
+
 /* load theme options */
 $options = get_option('scapegoat_theme_options');
 
@@ -103,6 +110,22 @@ function fallback_menu() {
     	)
     );
 }
+
+
+/* FUCHSY: Integrate Search to NavBar */
+add_filter('wp_nav_menu_items','add_search_box_to_menu', 10, 2);
+function add_search_box_to_menu( $items, $args ) {
+    if( $args->theme_location == 'header' )
+        return $items.get_search_form();
+    return $items;
+}
+
+/* FUCHSY: Add Excerpts to Pages */
+add_action( 'init', 'my_add_excerpts_to_pages' );
+function my_add_excerpts_to_pages() {
+     add_post_type_support( 'page', 'excerpt' );
+}
+
 
 /* add css class for li with submenu */
 class My_Walker_Nav_Menu extends Walker_Nav_Menu {
@@ -215,7 +238,7 @@ function admin_header_style() {
         }
     </style><?php
 }
-add_custom_image_header('header_style', 'admin_header_style');
+add_theme_support('header_style', 'admin_header_style');
 
 
 
@@ -471,7 +494,7 @@ function submenu() {
 			$parent = $post->ID;
 		}
 
-		$children = wp_list_pages("title_li=&child_of=". $parent ."&echo=0");
+		$children = wp_list_pages("sort_column=menu_order&title_li=&child_of=". $parent ."&echo=0");
 		if ($children) { ?>
 			<aside class="widget widget-sidebar widget_pages" role="navigation">
 				<div class="widget-inner">

@@ -9,14 +9,13 @@
 
 	<head profile="http://gmpg.org/xfn/11">
 
-		<title><?php bloginfo('name'); ?> <?php wp_title(' - ', true, 'left'); ?></title>
+		<title><?php wp_title(' - ', true, 'left'); ?></title>
 
 		<!-- ♥ ♥ ♥ Oh nice, you take a look at the sourcecode. I'm flattered. ♥ ♥ ♥ -->
-		<meta name="author" content="Peter Amende" />
-		<meta name="description" content="<?php bloginfo('description'); ?>" />
-
+		<meta name="author" content="Peter Amende - Hacked by Fuchsy" />
 		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+		<meta name="google-site-verification" content="NFSfRIacLcuJDsTWS8rGWaSnSx5Qtvpxc9BfEw8wSmg" />
 
 		<!-- Stylesheet -->
 		<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_url');?>" media="screen" />
@@ -41,12 +40,43 @@
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		<link rel="index" title="<?php bloginfo('description'); ?>" href="<?php bloginfo('url'); ?>" />
 
+		<script type="text/javascript"> // added by c3o
+		function shareLinks(data) {
+		  if (!data) return;
+		  var url = data.url ? encodeURIComponent(data.url) : encodeURIComponent(document.location.href);
+		  var title = data.title ? encodeURIComponent(data.title) : encodeURIComponent(document.title);
+		  var text = data.text ? encodeURIComponent(data.text) : null;
+		  var longText = data.longText ? encodeURIComponent(data.longText) : null;
+		  var icon = data.icon ? encodeURIComponent(data.icon) : null;
+
+		  var twitterAccount = 'piratenparteiat';
+		  var twitterAccountDesc = encodeURIComponent('Piratenpartei');
+		  var twitterUrl = 'https://twitter.com/intent/tweet?original_referer='+url+'%26related='+twitterAccount+'%3A'+twitterAccountDesc+'&text='+text+'&url='+url;
+
+		  var facebookAppID = 217938115051868;
+		  var facebookUrl = 'https://www.facebook.com/dialog/feed?link='+url+'&picture='+icon+'&name='+title+'&caption='+text+'&description='+longText+'&e2e=%7B%7D&app_id='+facebookAppID+'&locale=en_US&sdk=joey&display=popup&next='+url;
+  
+		  if (document.getElementsByClassName) {
+		    var links = document.getElementsByClassName('share_twitter');
+		    for (var i = 0; i < links.length; i++) {
+		      links[i].href = twitterUrl;  
+		    }
+		    var links = document.getElementsByClassName('share_facebook');
+		    for (var i = 0; i < links.length; i++) {
+		      links[i].href = facebookUrl;  
+		    }
+		  }
+		}
+		</script>
+
 		<?php if($options['style-option'] == 'show-special-1') : ?>
 			<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/css/special-1.css" media="screen" />
 			<?php if($options['special-1-bg-option'] == 'special-1-bg-1') : ?>
 				<style>#special-header {background-image: url("<?php bloginfo('template_directory'); ?>/images/special-1-bg-blue.jpg");background-color:#5cafc6;}</style>
 			<?php elseif($options['special-1-bg-option'] == 'special-1-bg-2') : ?>
 				<style>#special-header {background-image: url("<?php bloginfo('template_directory'); ?>/images/special-1-bg-orange.jpg");background-color:#f80;}</style>
+			<?php elseif($options['special-1-bg-option'] == 'special-1-bg-3') : ?>
+				<style>#special-header {background-image: url("<?php bloginfo('template_directory'); ?>/images/special-1-bg-violet.jpg");background-color:##4B2A91;}</style>
 			<?php endif; ?>
 		<?php elseif($options['style-option'] == 'show-special-2') : ?>
 			<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/css/special-2.css" media="screen" />
@@ -54,6 +84,8 @@
 				<style>#special-header {background-image: url("<?php bloginfo('template_directory'); ?>/images/special-1-bg-blue.jpg");background-color:#5cafc6;}</style>
 			<?php elseif($options['special-2-bg-option'] == 'special-2-bg-2') : ?>
 				<style>#special-header {background-image: url("<?php bloginfo('template_directory'); ?>/images/special-1-bg-orange.jpg");background-color:#f80;}</style>
+			<?php elseif($options['special-2-bg-option'] == 'special-2-bg-3') : ?>
+				<style>#special-header {background-image: url("<?php bloginfo('template_directory'); ?>/images/special-1-bg-violet.jpg");background-color:##4B2A91;}</style>
 			<?php endif; ?>
 		<?php endif; ?>
 
@@ -65,7 +97,7 @@
 				<nav id="main-nav" role="navigation">
 					<h2 id="nav-title" class="visuallyhidden"><?php _e('Navigation','scapegoat'); ?></h2>
 					<a href="#main-nav" class="menu-toggle"><?php _e('Navigation','scapegoat'); ?></a>
-					<?php wp_nav_menu(array('theme_location' => 'header', 'fallback_cb' => fallback_menu, 'walker' => new My_Walker_Nav_Menu())); ?>
+					<?php wp_nav_menu(array('theme_location' => 'header', 'fallback_cb' => 'fallback_menu', 'walker' => new My_Walker_Nav_Menu())); ?>
 					<div class="clear"></div>
 				</nav><!-- main-nav -->
 			</div><!-- main-nav-inside -->
@@ -180,7 +212,7 @@
 			<!-- Mobile Query -->
 			<?php if(!$detect->isMobile() || $detect->isTablet()) : ?>
 				<!-- Featured Container for Frontpage Slider and "Sidebar" -->
-				<?php if (is_home() && !is_paged() &&  is_front_page()) : ?>
+				<?php if (is_front_page()) : ?>
 					<?php include('slider.php'); ?>
 				<?php endif; ?>
 				<!-- Featured Container End -->

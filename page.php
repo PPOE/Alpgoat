@@ -34,7 +34,7 @@
 					</header>
 	
 					<article class="article">
-							<div class="excerpt"><?php the_excerpt(); ?></div>
+							<!--<div class="excerpt"><?php the_excerpt(); ?></div>-->
 							<?php the_content(); ?>
 					</article>
 					

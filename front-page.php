@@ -36,7 +36,7 @@
 				<?php endif; ?>
                 
                 <section id="frontpage-news">
-                    <h2>Neuigkeiten <a href="/category/news/" title="Mehr News">&raquo;</a></h2>
+                    <h2>Neuigkeiten <a href="/category/allgemein/" title="Mehr News">&raquo;</a></h2>
                     <ul>                
                     
                     <?php 

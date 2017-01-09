@@ -83,6 +83,5 @@
 <!--              ▲              -->
 <!--             ▲ ▲             -->
 
-<script src="//netzsperren.piratenpartei.at/campaign.js"></script>
 	</body>
 </html>

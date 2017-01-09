@@ -1819,7 +1819,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
 
 /* Specials */
 
-#text-2 {
+#text-6 {
 	background-image: url(images/bg-newsletter.png);
 	background-repeat: no-repeat;
 	background-position: right -10px;
@@ -1834,7 +1834,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
 
 /* Newsletter-Formular */
 
-#text-2 form {
+#text-6 form {
     background-color: rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     color: #FFFFFF;
@@ -1843,7 +1843,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
     padding: 0;
 }
 
-#text-2 #inputEmail {
+#text-6 #inputEmail {
     background: none repeat scroll 0 0 transparent;
     border: 0 none;
     box-shadow: none;
@@ -1854,7 +1854,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
     width: 65%;
 }
 
-#text-2 button {
+#text-6 button {
     background: none repeat scroll 0 0 transparent;
     border: none;
     color: #FFF;

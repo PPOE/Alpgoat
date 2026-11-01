@@ -12,11 +12,11 @@
 		<title><?php wp_title(' - ', true, 'left'); ?></title>
 
 		<!-- ♥ ♥ ♥ Oh nice, you take a look at the sourcecode. I'm flattered. ♥ ♥ ♥ -->
-		<meta name="author" content="Peter Amende - Hacked by Fuchsy" />
+		<meta name="author" content="Peter Amende und Fuchsy designed" />
 		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 		<meta name="google-site-verification" content="NFSfRIacLcuJDsTWS8rGWaSnSx5Qtvpxc9BfEw8wSmg" />
-
+		<meta property="fb:pages" content="132554303014" />
 		<!-- Stylesheet -->
 		<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_url');?>" media="screen" />
 		<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/css/plugins.css" media="screen" />
@@ -34,6 +34,9 @@
 		<?php else : ?>
 			<link rel="apple-touch-icon-precomposed" href="<?php bloginfo('template_directory'); ?>/images/touch-icon.png"/>
 		<?php endif; ?>
+
+		<link rel="preload" href="<?php bloginfo('stylesheet_directory');?>/fonts/DejaWeb.woff" as="font" type="font/woff" crossorigin />
+		<link rel="preload" href="<?php bloginfo('stylesheet_directory');?>/fonts/PoliticsHeadBold.woff" as="font" type="font/woff" crossorigin />
 
 		<link rel="alternate" type="application/rss+xml" title="RSS" href="<?php bloginfo('rss2_url'); ?>">
 		<link rel="canonical" href="<?php bloginfo('url'); ?>" />

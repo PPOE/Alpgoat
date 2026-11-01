@@ -2,7 +2,7 @@
 	Theme Name: alpinegoat
 	Theme URI: http://experimental.zutrinken.com/
 
-	Author: Peter Amende (Hacked by Fuchsy)
+	Author: Peter Amende (edited by Fuchsy)
 	Author URI: http://www.zutrinken.com
 
 	Version: 1.5.3
@@ -58,12 +58,14 @@
 	font-style: normal;
 	font-weight: normal;
 	src: local('☺'), local('DejaWeb'), url('fonts/DejaWeb.woff') format('woff');
+	font-display: swap;
 }
 @font-face {
 	font-family: 'PoliticsHeadBold';
 	font-style: normal;
 	font-weight: normal;
 	src: local('☺'), local('PoliticsHeadBold'), url('fonts/PoliticsHeadBold.woff') format('woff');
+	font-display: swap;
 }
 
 /* __________________________________________________________________.02 Reset */
@@ -1628,7 +1630,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
 	max-width: 150%;
 }
 #front-page-slider .front-page-slide .slide-text {
-	max-width: 80%;
+	max-width: 92%;
 	margin: 0 0 32px 32px;
 	height: auto;
 	padding: 10px;
@@ -1640,8 +1642,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
 #front-page-slider .front-page-slide .slide-text .slide-text-title {
 	margin: 0;
 	padding: 4px 10px;
-	font-size: 44px;
-	line-height: 52px;
+	font-size: 36px;
+	line-height: 38px;
 	color: #000;
 	background: #ffcc04;
 	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmY2MwNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmMzkyMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);

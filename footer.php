@@ -82,7 +82,6 @@
 		<?php wp_footer(); ?>
 <!--              ▲              -->
 <!--             ▲ ▲             -->
-
-<script src="//netzsperren.piratenpartei.at/campaign.js"></script>
+<!--<script src="//netzsperren.piratenpartei.at/campaign.js"></script>-->
 	</body>
 </html>

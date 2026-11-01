@@ -86,7 +86,7 @@
 
 						<?php if(get_the_author_meta('wiki')) : ?>
 						<span class="author_meta_row author_meta_twitter">
-							<a target="_blank" href="https://wiki.piratenpartei.de/Benutzer:<?php the_author_meta('wiki');?>"><?php the_author_meta('wiki');?></a>
+							<a target="_blank" href="https://wiki.piratenpartei.at/wiki/Benutzer:<?php the_author_meta('wiki');?>"><?php the_author_meta('wiki');?></a>
 							<span class="label"><?php _e('Wiki','scapegoat') ?></span>
 						</span>
 						<?php endif; ?>

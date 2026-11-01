@@ -34,10 +34,9 @@
 					</header>
 	
 					<article class="article">
-							<!--<div class="excerpt"><?php the_excerpt(); ?></div>-->
-							<?php the_content(); ?>
+						<!--<div class="excerpt"><?php the_excerpt(); ?></div>-->
+						<?php the_content(); ?>
 					</article>
-					
 				</section>
 				
 				<?php endwhile; ?>

@@ -1,5 +1,9 @@
 <?php
 
+
+// Force certificate validation
+add_filter( 'https_local_ssl_verify', '__return_true' );
+
 /* allow svg uploads - added by c3o */
 function cc_mime_types( $mimes ){
 	$mimes['svg'] = 'image/svg+xml';
@@ -609,7 +613,7 @@ function breadcrumb() {
 
 
 /* widget specially for images */
-class banner extends WP_Widget {
+/*class banner extends WP_Widget {
 
 	function banner() {
 		parent::__construct(
@@ -664,8 +668,68 @@ class banner extends WP_Widget {
 		</p>
 		<?php 
 	}
+}*/
+class banner extends WP_Widget {
+
+    function __construct() {
+        parent::__construct(
+            'banner', // Widget-ID
+            __('Banner','scapegoat'), // Widget-Name
+            array('description' => __('Widgets für Banner.', 'scapegoat'))
+        );
+    }
+
+    function widget($args, $instance) {
+        $title   = apply_filters('widget_title', $instance['title']);
+        $picture = esc_url($instance['picture']);
+        $link    = esc_url($instance['link']);
+
+        echo $args['before_widget'];
+        if ($title) {
+            echo $args['before_title'] . $title . $args['after_title'];
+        }
+
+        if (!empty($picture) && !empty($link)) {
+            echo '<a href="' . $link . '"><img style="width:100%;display:block;" src="' . $picture . '"></a>';
+        } elseif ($picture) {
+            echo '<img style="width:100%;display:block;" src="' . $picture . '">';
+        }
+    }
+
+    function form($instance) {
+        $title   = esc_attr($instance['title'] ?? '');
+        $picture = esc_url($instance['picture']);
+        $link    = esc_url($instance['link']);
+        ?>
+        <p>
+            <label>Titel:</label>
+            <input class="widefat" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
+        </p>
+        <p>
+            <label>Bild URL:</label>
+            <input class="widefat" name="<?php echo $this->get_field_name('picture'); ?>" type="text" value="<?php echo $picture; ?>" />
+        </p>
+        <p>
+            <label>Link URL:</label>
+            <input class="widefat" name="<?php echo $this->get_field_name('link'); ?>" type="text" value="<?php echo $link; ?>" />
+        </p>
+        <?php
+    }
+
+    function update($new_instance, $old_instance) {
+        $instance = array();
+        $instance['title'] = (!empty($new_instance['title'])) ? strip_tags($new_instance['title']) : '';
+        $instance['picture'] = (!empty($new_instance['picture'])) ? strip_tags($new_instance['picture']) : '';
+        $instance['link'] = (!empty($new_instance['link'])) ? strip_tags($new_instance['link']) : '';
+        return $instance;
+    }
 }
-add_action('widgets_init', create_function('', 'return register_widget("banner");'));
+
+/* add_action('widgets_init', create_function('', 'return register_widget("banner");'));*/
+add_action('widgets_init', function() {
+    register_widget("banner");
+});
+
 
 /* custom comment-list */
 function custom_comment($comment, $args, $depth) {

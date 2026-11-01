@@ -677,7 +677,7 @@ class banner extends WP_Widget {
             __('Banner','scapegoat'), // Widget-Name
             array('description' => __('Widgets für Banner.', 'scapegoat'))
         );
-    }
+}
 
     function widget($args, $instance) {
         $title   = apply_filters('widget_title', $instance['title']);
